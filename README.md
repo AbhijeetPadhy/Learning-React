@@ -9,18 +9,20 @@
   - [Run the app](#run-the-app)
   - [Directly](#directly)
   - [What are components?](#what-are-components)
-    - [\[ChatGPT\] What are props and states of components?](#chatgpt-what-are-props-and-states-of-components)
-    - [\[ChatGPT\] what are components in react js](#chatgpt-what-are-components-in-react-js)
-    - [\[ChatGPT\] After running npm run build, I got a build folder. Inside that there was an index.html. On opening it, nothing is displayed](#chatgpt-after-running-npm-run-build-i-got-a-build-folder-inside-that-there-was-an-indexhtml-on-opening-it-nothing-is-displayed)
+  - [\[ChatGPT\] What are props and states of components?](#chatgpt-what-are-props-and-states-of-components)
+  - [\[ChatGPT\] what are components in react js](#chatgpt-what-are-components-in-react-js)
+  - [\[ChatGPT\] After running npm run build, I got a build folder. Inside that there was an index.html. On opening it, nothing is displayed](#chatgpt-after-running-npm-run-build-i-got-a-build-folder-inside-that-there-was-an-indexhtml-on-opening-it-nothing-is-displayed)
 - [JavaScript Refresher | Complete React Course in Hindi #3](#javascript-refresher--complete-react-course-in-hindi-3)
-    - [what are let, var and const in js](#what-are-let-var-and-const-in-js)
-    - [What are the datatypes allowed in js?](#what-are-the-datatypes-allowed-in-js)
-    - [\[ChatGPT\] How to write JS objects?](#chatgpt-how-to-write-js-objects)
-    - [\[ChatGPT\] So how can we access the members of the objects in all the cases](#chatgpt-so-how-can-we-access-the-members-of-the-objects-in-all-the-cases)
-    - [\[ChatGPT\] what are the different kinds of events in js](#chatgpt-what-are-the-different-kinds-of-events-in-js)
-    - [\[ChatGPT\] what is strict mode in js](#chatgpt-what-is-strict-mode-in-js)
-    - [\[ChatGPT\] What are callbacks in js](#chatgpt-what-are-callbacks-in-js)
-    - [\[ChatGPT\] what are promises in js](#chatgpt-what-are-promises-in-js)
+  - [what are let, var and const in js](#what-are-let-var-and-const-in-js)
+  - [What are the datatypes allowed in js?](#what-are-the-datatypes-allowed-in-js)
+  - [\[ChatGPT\] How to write JS objects?](#chatgpt-how-to-write-js-objects)
+  - [\[ChatGPT\] So how can we access the members of the objects in all the cases](#chatgpt-so-how-can-we-access-the-members-of-the-objects-in-all-the-cases)
+  - [\[ChatGPT\] what are the different kinds of events in js](#chatgpt-what-are-the-different-kinds-of-events-in-js)
+  - [\[ChatGPT\] what is strict mode in js](#chatgpt-what-is-strict-mode-in-js)
+  - [\[ChatGPT\] What are callbacks in js](#chatgpt-what-are-callbacks-in-js)
+  - [\[ChatGPT\] what are promises in js](#chatgpt-what-are-promises-in-js)
+- [Understanding JSX](#understanding-jsx)
+  - [if we use react, do we still need to use thymeleaf in spring project. Will it not be useless to use thymeleaf](#if-we-use-react-do-we-still-need-to-use-thymeleaf-in-spring-project-will-it-not-be-useless-to-use-thymeleaf)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -32,6 +34,7 @@
 6. Auto Rename Tag [VS Code Extension]
 7. Live Server [VS Code Extension]
 8. Prettier - Code formatter [Optional] [VS Code Extension]
+9. Include {"javascript" : "javascriptreact"} in emmet
 
 # Creating our first react app using create-react-app | Complete React Course in Hindi #2
 
@@ -59,7 +62,7 @@ Reusable portions of a website for example nav-bar, side-bar, etc.
 
 ---
 
-### [ChatGPT] What are props and states of components?
+## [ChatGPT] What are props and states of components?
 
 In React, components are the building blocks of a user interface. They are reusable, self-contained modules that encapsulate a portion of the user interface and its behavior. Two fundamental concepts in React components are props and state.
 
@@ -143,7 +146,7 @@ In the folder structure of the react app, inside the public folder, there is an 
 App.js is a component and index.js is the entry point. index.js tells to render App component.
 
 ---
-### [ChatGPT] what are components in react js
+## [ChatGPT] what are components in react js
 
 In React, components are the building blocks of user interfaces. They are reusable, self-contained modules that encapsulate a portion of the user interface and its behavior. Components in React can be classified into two types:
 
@@ -216,7 +219,7 @@ To create a production build, use npm run build.
 
 ---
 
-### [ChatGPT] After running npm run build, I got a build folder. Inside that there was an index.html. On opening it, nothing is displayed
+## [ChatGPT] After running npm run build, I got a build folder. Inside that there was an index.html. On opening it, nothing is displayed
 
 If you're opening the `index.html` file from the build folder directly in your browser, it may not work as expected. This is because React applications rely on JavaScript files and other static assets that are generated during the build process.
 
@@ -255,7 +258,7 @@ If you are using VS code then you can use this command shift + 1 and enter to au
 
 ---
 
-### what are let, var and const in js
+## what are let, var and const in js
 
 In JavaScript, `let`, `var`, and `const` are used to declare variables, but they have different behaviors and scoping rules:
 
@@ -312,7 +315,7 @@ It's generally recommended to use `const` by default when declaring variables, a
 
 ---
 
-### What are the datatypes allowed in js?
+## What are the datatypes allowed in js?
 
 JavaScript supports several built-in data types, including:
 
@@ -353,7 +356,7 @@ It's important to note that `typeof null` returns `"object"`, which is considere
 In addition to these built-in data types, JavaScript also provides various methods and techniques for working with and manipulating data, such as arrays, regular expressions, and JSON (JavaScript Object Notation).
 
 ---
-### [ChatGPT] How to write JS objects?
+## [ChatGPT] How to write JS objects?
 
 ```
 In a js object, should a key be inside quotes?
@@ -399,7 +402,7 @@ let obj = {
 
 Both forms are correct and will create a valid JavaScript object. It is a matter of personal preference or adhering to specific coding conventions in your project.
 
-### [ChatGPT] So how can we access the members of the objects in all the cases
+## [ChatGPT] So how can we access the members of the objects in all the cases
 
 To access the members (properties or values) of an object in JavaScript, you can use dot notation or bracket notation. The approach remains the same regardless of whether the keys are defined with or without quotes. Here's how you can access object members:
 
@@ -437,7 +440,7 @@ Both dot notation and bracket notation work for accessing object members, regard
 
 ---
 
-### [ChatGPT] what are the different kinds of events in js
+## [ChatGPT] what are the different kinds of events in js
 
 In JavaScript, events are actions or occurrences that happen in the browser or on a web page. JavaScript provides several types of events that you can respond to and handle in your code. Here are some of the most commonly used event types in JavaScript:
 
@@ -490,7 +493,7 @@ Always use strict mode while developing in react as it helps to prevent wrong pr
 
 ---
 
-### [ChatGPT] what is strict mode in js
+## [ChatGPT] what is strict mode in js
 
 Strict mode is a feature in JavaScript that enforces stricter parsing and error handling rules. It was introduced in ECMAScript 5 (ES5) to address certain shortcomings and improve the overall behavior of JavaScript.
 
@@ -538,7 +541,7 @@ It's important to note that strict mode is opt-in and not the default behavior i
 
 ---
 
-### [ChatGPT] What are callbacks in js
+## [ChatGPT] What are callbacks in js
 
 In JavaScript, a callback is a function that is passed as an argument to another function and is intended to be executed at a later point in time. The concept of callbacks allows for asynchronous and event-driven programming in JavaScript.
 
@@ -581,7 +584,7 @@ In this example, the `fetchData` function simulates an asynchronous operation by
 
 Callbacks allow you to define custom behavior that can be executed when a specific condition or event occurs, enabling you to write flexible and non-blocking code in JavaScript. However, as JavaScript evolves, alternative approaches like Promises and async/await have been introduced to simplify asynchronous programming and address some of the limitations of callbacks.
 
-### [ChatGPT] what are promises in js
+## [ChatGPT] what are promises in js
 
 In JavaScript, a Promise is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. Promises provide a way to handle asynchronous code in a more organized and readable manner, avoiding the "callback hell" problem.
 
@@ -629,3 +632,41 @@ You can use `.then()` to handle the resolved value of the Promise, and `.catch()
 Promises provide a more elegant and structured way to handle asynchronous code in JavaScript, making it easier to reason about and maintain asynchronous operations in your applications. Promises have become a standard approach for handling asynchronous tasks, and they form the foundation of more advanced features like `async/await`.
 
 ---
+
+# Understanding JSX
+
+There are two kinds of components in react: class based and function based. Function based components is the new trend. `class` is a reserved keyword in JS, so wherever we have to use `class` in JSX, use `className` instead.
+
++ class -> className
++ for -> htmlFor
+
+In App.js, we can return only one div (or element). If we need to return two elements, we can use a JSX fragment as shown:
+
+```html
+<>
+  <h> Hello </h>
+  <div></div>
+</>
+```
+
+## if we use react, do we still need to use thymeleaf in spring project. Will it not be useless to use thymeleaf
+
+If you are using React as the front-end framework in your Spring project, you may not necessarily need to use Thymeleaf as the template engine. Thymeleaf is typically used for server-side rendering (SSR) and generating dynamic HTML on the server before sending it to the client.
+
+When using React, the UI rendering and dynamic updates are typically handled on the client-side using JavaScript. React components are responsible for rendering the UI and managing the application state. The server primarily serves as an API endpoint that provides data to the React application.
+
+In this scenario, Thymeleaf may not be required for generating HTML templates on the server because the client-side rendering (CSR) approach with React takes care of the UI rendering. Instead, the server can focus on providing the necessary data through RESTful APIs or GraphQL endpoints.
+
+However, there might be cases where you still need to use Thymeleaf in your Spring project, such as:
+
+1. Hybrid applications: If your application requires a mix of server-side rendering and client-side rendering, you can use Thymeleaf to generate initial HTML on the server and then let React take over for subsequent dynamic updates on the client.
+
+2. Server-generated content: Thymeleaf can be useful for generating parts of the HTML that are not managed by React, such as static pages, non-interactive components, or content that does not require dynamic updates.
+
+3. Progressive enhancement: Thymeleaf can be used to provide an initial, server-rendered version of the page for better performance, SEO, or to support non-JavaScript environments, while still incorporating React for enhanced interactivity on supported clients.
+
+Ultimately, the decision to use Thymeleaf in a Spring project alongside React depends on your specific requirements and the architecture you want to adopt. If your application is primarily focused on client-side rendering with React, Thymeleaf may not be necessary. However, if you have specific server-side rendering or hybrid rendering needs, Thymeleaf can still be beneficial.
+
+---
+
+In JSX, text passed using variables from external sources automatically get sanitised, i.e. if there are html tag symbols, they will remain intact. Refer App.js in this commit. This is done for safety purpose so that we don't allow anyone to run any dangerous script to run inside html. JSX gets compiled using babel.
