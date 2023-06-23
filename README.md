@@ -12,6 +12,15 @@
     - [\[ChatGPT\] What are props and states of components?](#chatgpt-what-are-props-and-states-of-components)
     - [\[ChatGPT\] what are components in react js](#chatgpt-what-are-components-in-react-js)
     - [\[ChatGPT\] After running npm run build, I got a build folder. Inside that there was an index.html. On opening it, nothing is displayed](#chatgpt-after-running-npm-run-build-i-got-a-build-folder-inside-that-there-was-an-indexhtml-on-opening-it-nothing-is-displayed)
+- [JavaScript Refresher | Complete React Course in Hindi #3](#javascript-refresher--complete-react-course-in-hindi-3)
+    - [what are let, var and const in js](#what-are-let-var-and-const-in-js)
+    - [What are the datatypes allowed in js?](#what-are-the-datatypes-allowed-in-js)
+    - [\[ChatGPT\] How to write JS objects?](#chatgpt-how-to-write-js-objects)
+    - [\[ChatGPT\] So how can we access the members of the objects in all the cases](#chatgpt-so-how-can-we-access-the-members-of-the-objects-in-all-the-cases)
+    - [\[ChatGPT\] what are the different kinds of events in js](#chatgpt-what-are-the-different-kinds-of-events-in-js)
+    - [\[ChatGPT\] what is strict mode in js](#chatgpt-what-is-strict-mode-in-js)
+    - [\[ChatGPT\] What are callbacks in js](#chatgpt-what-are-callbacks-in-js)
+    - [\[ChatGPT\] what are promises in js](#chatgpt-what-are-promises-in-js)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -237,5 +246,386 @@ Here are a couple of options to view your React app:
    - Once the deployment is complete, you will receive a URL where your app is hosted. Open that URL in your browser to view your React app.
 
 Using one of these methods, you should be able to properly view and interact with your React app after running `npm run build`.
+
+---
+
+# JavaScript Refresher | Complete React Course in Hindi #3
+
+If you are using VS code then you can use this command shift + 1 and enter to auto-populate HTML Doctype in HTML or PHP.
+
+---
+
+### what are let, var and const in js
+
+In JavaScript, `let`, `var`, and `const` are used to declare variables, but they have different behaviors and scoping rules:
+
+1. `var`: `var` was traditionally used to declare variables in JavaScript. Variables declared with `var` are function-scoped or globally-scoped, meaning they are accessible within the function or global scope where they are declared. `var` variables are also hoisted, which means that they are moved to the top of their scope during the compilation phase.
+
+   Example:
+   ```javascript
+   function example() {
+     var x = 10;
+     if (true) {
+       var y = 20;
+       console.log(x); // Output: 10
+     }
+     console.log(y); // Output: 20
+   }
+   ```
+
+   In this example, both `x` and `y` are accessible throughout the function, even though `y` is declared inside the `if` block.
+
+2. `let`: Introduced in ECMAScript 6 (ES6), `let` allows you to declare block-scoped variables. Block scope means that variables declared with `let` are only accessible within the block where they are declared (e.g., inside loops, conditional statements, or block statements). Unlike `var`, `let` variables are not hoisted to the top of their scope.
+
+   Example:
+   ```javascript
+   function example() {
+     let x = 10;
+     if (true) {
+       let y = 20;
+       console.log(x); // Output: 10
+     }
+     console.log(y); // Error: y is not defined
+   }
+   ```
+
+   In this example, `x` is accessible within the function, but `y` is only accessible within the `if` block.
+
+3. `const`: `const` is used to declare constants, which are variables that cannot be reassigned after their initial assignment. Like `let`, `const` is also block-scoped. It must be assigned a value when declared and cannot be left uninitialized. `const` variables are not hoisted either.
+
+   Example:
+   ```javascript
+   function example() {
+     const x = 10;
+     if (true) {
+       const y = 20;
+       console.log(x); // Output: 10
+     }
+     console.log(y); // Error: y is not defined
+   }
+   ```
+
+   In this example, `x` is accessible within the function, but `y` is only accessible within the `if` block. Additionally, you cannot reassign a new value to `x` or `y` after their initial assignment.
+
+It's generally recommended to use `const` by default when declaring variables, as it helps enforce immutability and prevents accidental reassignment. Use `let` when you need to reassign a variable, and reserve `var` for specific use cases or when working with older JavaScript codebases.
+
+
+---
+
+### What are the datatypes allowed in js?
+
+JavaScript supports several built-in data types, including:
+
+1. Primitive Data Types:
+   - `undefined`: Represents an undefined value.
+   - `null`: Represents the absence of any object value.
+   - `boolean`: Represents a boolean value, either `true` or `false`.
+   - `number`: Represents numeric values, including integers and floating-point numbers.
+   - `string`: Represents textual data enclosed in single quotes ('') or double quotes ("").
+   - `symbol` (introduced in ECMAScript 6): Represents unique and immutable values that can be used as identifiers for object properties.
+
+2. Object Data Type:
+   - `object`: Represents a collection of key-value pairs or properties. Objects can be created using object literals `{}`, the `new` keyword, or built-in constructor functions like `Array`, `Date`, etc.
+
+3. Special Data Types:
+   - `function`: Represents a callable object that can be invoked.
+   - `BigInt` (introduced in ECMAScript 2020): Represents arbitrary precision integers.
+
+JavaScript is a dynamically typed language, which means that variables can hold values of any data type, and the data type can change dynamically during runtime.
+
+You can use the `typeof` operator to determine the data type of a value. For example:
+
+```javascript
+typeof 42;          // "number"
+typeof "Hello";     // "string"
+typeof true;        // "boolean"
+typeof undefined;   // "undefined"
+typeof null;        // "object"
+typeof {};          // "object"
+typeof [];          // "object"
+typeof function(){};   // "function"
+typeof Symbol();    // "symbol"
+typeof BigInt(123); // "bigint"
+```
+
+It's important to note that `typeof null` returns `"object"`, which is considered a historical bug in JavaScript.
+
+In addition to these built-in data types, JavaScript also provides various methods and techniques for working with and manipulating data, such as arrays, regular expressions, and JSON (JavaScript Object Notation).
+
+---
+### [ChatGPT] How to write JS objects?
+
+```
+In a js object, should a key be inside quotes?
+
+        let obj = {
+            "name" : "Abhijeet",
+            roll : 123,
+            "hobby*" : "Badminton", 
+        };
+
+Is it correct to write in this manner?
+```
+
+In JavaScript objects, keys can be written with or without quotes, depending on the specific requirements and naming conventions you want to follow. Here's the breakdown:
+
+1. Keys without quotes: In JavaScript, if a key is a valid JavaScript identifier, meaning it starts with a letter, underscore, or dollar sign, and consists of letters, digits, underscores, or dollar signs, you can write the key without quotes.
+
+In your example, `roll` is a valid identifier, so it doesn't require quotes. It can be written as `roll: 123`.
+
+2. Keys with quotes: If a key is not a valid JavaScript identifier, or if you want to use special characters, spaces, or reserved words as keys, you need to enclose the key in quotes. Quotes can be either single quotes (''), double quotes (""), or backticks (``).
+
+In your example, `"name"` and `"hobby*"` are enclosed in quotes because they contain non-alphanumeric characters and a reserved character (*). It is perfectly fine to write them in this manner.
+
+So, the object can be written as:
+
+```javascript
+let obj = {
+    "name": "Abhijeet",
+    roll: 123,
+    "hobby*": "Badminton"
+};
+```
+
+or
+
+```javascript
+let obj = {
+    name: "Abhijeet",
+    roll: 123,
+    'hobby*': "Badminton"
+};
+```
+
+Both forms are correct and will create a valid JavaScript object. It is a matter of personal preference or adhering to specific coding conventions in your project.
+
+### [ChatGPT] So how can we access the members of the objects in all the cases
+
+To access the members (properties or values) of an object in JavaScript, you can use dot notation or bracket notation. The approach remains the same regardless of whether the keys are defined with or without quotes. Here's how you can access object members:
+
+Using dot notation:
+```javascript
+let obj = {
+    name: "Abhijeet",
+    roll: 123,
+    "hobby*": "Badminton"
+};
+
+console.log(obj.name);        // Output: "Abhijeet"
+console.log(obj.roll);        // Output: 123
+console.log(obj["hobby*"]);   // Output: "Badminton"
+```
+
+In this example, `obj.name` accesses the value associated with the `name` key, `obj.roll` accesses the value associated with the `roll` key, and `obj["hobby*"]` accesses the value associated with the `"hobby*"` key. Dot notation is commonly used when the key is a valid JavaScript identifier.
+
+Using bracket notation:
+```javascript
+let obj = {
+    "name": "Abhijeet",
+    roll: 123,
+    "hobby*": "Badminton"
+};
+
+console.log(obj["name"]);     // Output: "Abhijeet"
+console.log(obj["roll"]);     // Output: 123
+console.log(obj["hobby*"]);   // Output: "Badminton"
+```
+
+In this example, `obj["name"]`, `obj["roll"]`, and `obj["hobby*"]` use bracket notation to access the values associated with the respective keys. Bracket notation is useful when the key contains special characters, spaces, or is stored in a variable.
+
+Both dot notation and bracket notation work for accessing object members, regardless of whether the keys are defined with or without quotes. Choose the notation that suits your specific needs and the nature of your object keys.
+
+---
+
+### [ChatGPT] what are the different kinds of events in js
+
+In JavaScript, events are actions or occurrences that happen in the browser or on a web page. JavaScript provides several types of events that you can respond to and handle in your code. Here are some of the most commonly used event types in JavaScript:
+
+1. Mouse Events:
+   - `click`: Occurs when the user clicks the mouse button.
+   - `mouseover`: Occurs when the mouse pointer moves over an element.
+   - `mouseout`: Occurs when the mouse pointer moves out of an element.
+   - `mousedown`: Occurs when the mouse button is pressed down.
+   - `mouseup`: Occurs when the mouse button is released.
+
+2. Keyboard Events:
+   - `keydown`: Occurs when a key on the keyboard is pressed down.
+   - `keyup`: Occurs when a key on the keyboard is released.
+   - `keypress`: Occurs when a key on the keyboard is pressed and released.
+
+3. Form Events:
+   - `submit`: Occurs when a form is submitted.
+   - `change`: Occurs when the value of a form element (input, select, etc.) changes.
+   - `focus`: Occurs when an element receives focus.
+   - `blur`: Occurs when an element loses focus.
+
+4. Window Events:
+   - `load`: Occurs when the web page finishes loading.
+   - `resize`: Occurs when the browser window is resized.
+   - `scroll`: Occurs when the user scrolls the page.
+
+5. Touch Events (for mobile devices):
+   - `touchstart`: Occurs when a touch point is placed on the touch surface.
+   - `touchmove`: Occurs when a touch point moves along the touch surface.
+   - `touchend`: Occurs when a touch point is removed from the touch surface.
+
+These are just a few examples of the many event types available in JavaScript. You can listen for and handle events using event listeners or by assigning event handler functions to elements in your HTML or through JavaScript code.
+
+For example, to handle a `click` event on a button element with an id of "myButton", you can use the following code:
+
+```javascript
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", function(event) {
+  // Handle the click event
+  console.log("Button clicked!");
+});
+```
+
+By defining event handlers for different event types, you can respond to user interactions and create dynamic and interactive web applications.
+
+---
+
+Always use strict mode while developing in react as it helps to prevent wrong programming practices.
+
+---
+
+### [ChatGPT] what is strict mode in js
+
+Strict mode is a feature in JavaScript that enforces stricter parsing and error handling rules. It was introduced in ECMAScript 5 (ES5) to address certain shortcomings and improve the overall behavior of JavaScript.
+
+Enabling strict mode in your JavaScript code provides the following benefits:
+
+1. More reliable code:
+   - Prevents the use of undeclared variables by throwing an error.
+   - Assigning a value to an undeclared variable or a read-only property will throw an error.
+   - Silent errors, which might cause unexpected behavior, are turned into exceptions.
+
+2. Restricted syntax and behaviors:
+   - Variables and functions must be declared with `var`, `let`, or `const`. Implicit global variables are not allowed.
+   - Duplicate parameter names in function declarations throw an error.
+   - Deleting variables, functions, or function arguments is not allowed.
+   - Octal literals (e.g., `0123`) are not allowed.
+
+3. Makes JavaScript more future-proof:
+   - Disallows the use of certain deprecated features, encouraging the use of newer, standardized alternatives.
+   - Allows compatibility with future versions of ECMAScript by preventing the use of syntax that might be reserved in future releases.
+
+To enable strict mode in your JavaScript code, you can include the following line at the beginning of a script or a function:
+
+```javascript
+"use strict";
+```
+
+When strict mode is enabled in a script, it applies to the entire script. When enabled within a function, it applies only to that function and its nested functions.
+
+For example:
+
+```javascript
+"use strict";
+
+function myFunction() {
+  "use strict";
+  // Function code
+}
+```
+
+It's important to note that strict mode is opt-in and not the default behavior in JavaScript. By explicitly enabling strict mode, you can ensure better code quality, catch potential errors, and make your code more robust and future-proof.
+
+---
+
+`this` refers to window object.
+
+---
+
+### [ChatGPT] What are callbacks in js
+
+In JavaScript, a callback is a function that is passed as an argument to another function and is intended to be executed at a later point in time. The concept of callbacks allows for asynchronous and event-driven programming in JavaScript.
+
+Here's how callbacks work:
+
+1. Passing a callback function:
+   In JavaScript, functions are first-class objects, which means they can be assigned to variables, passed as arguments to other functions, and returned from functions. To use a callback, you can define a function and pass it as an argument to another function.
+
+2. Execution at a later time:
+   The function receiving the callback can choose when and how to invoke the callback function. This typically happens when a specific event or condition occurs, or when an asynchronous operation completes.
+
+3. Handling the callback:
+   When the condition or event specified by the function is met, the callback function is invoked, and any necessary data can be passed to it as arguments. The callback function can perform some action or execute a specific block of code.
+
+Callbacks are commonly used in scenarios such as:
+
+- Asynchronous operations: Callbacks are often used to handle the completion or errors of asynchronous operations like fetching data from a server, reading files, or making API requests.
+
+- Event handling: Event-driven programming relies heavily on callbacks. For example, you can attach event listeners to DOM elements and define callback functions to handle events like clicks, mouse movements, or keyboard inputs.
+
+Example usage of callbacks:
+
+```javascript
+function fetchData(callback) {
+  // Simulating an asynchronous operation
+  setTimeout(function() {
+    const data = { name: "John", age: 25 };
+    callback(data); // Invoke the callback function with data
+  }, 2000);
+}
+
+function processData(data) {
+  console.log("Received data:", data);
+}
+
+fetchData(processData);
+```
+
+In this example, the `fetchData` function simulates an asynchronous operation by using `setTimeout`. It accepts a callback function as an argument. After a delay of 2 seconds, it invokes the callback function and passes the retrieved data as an argument. The `processData` function is defined as the callback and handles the received data.
+
+Callbacks allow you to define custom behavior that can be executed when a specific condition or event occurs, enabling you to write flexible and non-blocking code in JavaScript. However, as JavaScript evolves, alternative approaches like Promises and async/await have been introduced to simplify asynchronous programming and address some of the limitations of callbacks.
+
+### [ChatGPT] what are promises in js
+
+In JavaScript, a Promise is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. Promises provide a way to handle asynchronous code in a more organized and readable manner, avoiding the "callback hell" problem.
+
+A Promise can be in one of three states:
+
+1. Pending: The initial state when the Promise is still executing the asynchronous operation.
+2. Fulfilled: The state when the asynchronous operation is successfully completed, and the Promise is resolved with a value.
+3. Rejected: The state when the asynchronous operation encounters an error or fails, and the Promise is rejected with a reason or an error object.
+
+Promises have the following features:
+
+1. Asynchronous execution: Promises are designed to handle asynchronous operations, such as fetching data from an API, reading files, or making network requests. They allow you to work with the result of an asynchronous operation in a more structured manner.
+
+2. Chaining: Promises can be chained together using `then()` to handle multiple asynchronous operations in sequence. This makes it easier to manage dependencies and avoid callback nesting.
+
+3. Error handling: Promises provide a `catch()` method to handle errors that occur during the execution of the asynchronous operation. This allows for centralized error handling and avoids the need for repetitive error callbacks.
+
+Here's an example that demonstrates the usage of Promises:
+
+```javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+      const data = { name: "John", age: 25 };
+      resolve(data); // Resolve the Promise with the data
+      // reject(new Error("Failed to fetch data")); // Reject the Promise with an error
+    }, 2000);
+  });
+}
+
+fetchData()
+  .then((data) => {
+    console.log("Received data:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+```
+
+In this example, the `fetchData` function returns a new Promise. Within the Promise constructor, an asynchronous operation is simulated using `setTimeout`. After a delay of 2 seconds, the Promise is resolved with the retrieved data using the `resolve()` method. If there is an error, you can reject the Promise using the `reject()` method.
+
+You can use `.then()` to handle the resolved value of the Promise, and `.catch()` to handle any errors that occur during the Promise execution.
+
+Promises provide a more elegant and structured way to handle asynchronous code in JavaScript, making it easier to reason about and maintain asynchronous operations in your applications. Promises have become a standard approach for handling asynchronous tasks, and they form the foundation of more advanced features like `async/await`.
 
 ---

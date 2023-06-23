@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict";
+        let a = 50;
+        console.log(a);
+
+        function hello() {
+            console.log("Hello Harry!");
+        }
+
+        hello();
+
+        let obj = {
+            "name" : "Abhijeet",
+            roll : 123,
+            "hobby*" : "Badminton", 
+            func: function myfunc(number) {
+                console.log("The number is " + number);
+            }
+        };
+
+        console.log(obj);
+        // note that key need not be in quotes
+        console.log(obj.name);
+        console.log(obj.roll);
+        console.log(obj["hobby*"]);
+        console.log(obj.func);
+        console.log(obj.func(45));
+
+        document.addEventListener("click", function click(){
+            console.log("clicked");
+            //alert("clicked!");
+            let conf = confirm("Are you sure?");
+            console.log(conf);
+        });
+
+        let arr = [34, 21, 45];
+
+        console.log(this);
+
+        let mobj = {
+            func1 : () => {
+                console.log("this refers to " + this);
+            },
+            func2 : function func() {
+                console.log("this refers to " + this);
+            }
+        };
+        // note the difference between arrow function and normal function
+        console.log(mobj.func1());
+        console.log(mobj.func2());
+
+        setTimeout(() => {
+            console.log("Run after 3secs");
+        }, 3000);
+        console.log("I am executed immediately as js is asynchronous!");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
