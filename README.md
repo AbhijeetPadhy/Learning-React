@@ -25,6 +25,8 @@
   - [if we use react, do we still need to use thymeleaf in spring project. Will it not be useless to use thymeleaf](#if-we-use-react-do-we-still-need-to-use-thymeleaf-in-spring-project-will-it-not-be-useless-to-use-thymeleaf)
 - [Project 1: Setup + Adding Bootstrap to React | Complete React Course in Hindi #5](#project-1-setup--adding-bootstrap-to-react--complete-react-course-in-hindi-5)
   - [\[ChatGPT\] Can we use class instead of className in the latest version of react?](#chatgpt-can-we-use-class-instead-of-classname-in-the-latest-version-of-react)
+- [Understanding Props and PropTypes in React | Complete React Course in Hindi #6](#understanding-props-and-proptypes-in-react--complete-react-course-in-hindi-6)
+- [Understanding State \& Handling Events in React | Complete React Course in Hindi #7](#understanding-state--handling-events-in-react--complete-react-course-in-hindi-7)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -707,3 +709,23 @@ In this case, `className` is used to define the CSS class for the `<div>` elemen
 
 To summarize, while you can use the `class` attribute instead of `className` for defining CSS classes in JSX code, it is recommended to use `className` within React components to avoid any confusion between the JavaScript `class` keyword and CSS classes.
 
+# Understanding Props and PropTypes in React | Complete React Course in Hindi #6
+
+props are short for properties
+
+rfc -> react function based component
+impt -> import PropTypes
+pts -> PropTypes.string
+
+Anywhere we use a component name in tags, it gets automatically imported.
+
+props are read only.
+we can also pass objects as props.
+
+# Understanding State & Handling Events in React | Complete React Course in Hindi #7
+
+You should still use className and htmlFor in your JSX, it was showing me error in inspect element although page was displaying correctly.
+
+Hooks help to use class features without using class based components.
+
+You can't use value={text} without using onChange={handleOnChange}.
