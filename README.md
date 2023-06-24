@@ -23,6 +23,8 @@
   - [\[ChatGPT\] what are promises in js](#chatgpt-what-are-promises-in-js)
 - [Understanding JSX](#understanding-jsx)
   - [if we use react, do we still need to use thymeleaf in spring project. Will it not be useless to use thymeleaf](#if-we-use-react-do-we-still-need-to-use-thymeleaf-in-spring-project-will-it-not-be-useless-to-use-thymeleaf)
+- [Project 1: Setup + Adding Bootstrap to React | Complete React Course in Hindi #5](#project-1-setup--adding-bootstrap-to-react--complete-react-course-in-hindi-5)
+  - [\[ChatGPT\] Can we use class instead of className in the latest version of react?](#chatgpt-can-we-use-class-instead-of-classname-in-the-latest-version-of-react)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -670,3 +672,38 @@ Ultimately, the decision to use Thymeleaf in a Spring project alongside React de
 ---
 
 In JSX, text passed using variables from external sources automatically get sanitised, i.e. if there are html tag symbols, they will remain intact. Refer App.js in this commit. This is done for safety purpose so that we don't allow anyone to run any dangerous script to run inside html. JSX gets compiled using babel.
+
+# Project 1: Setup + Adding Bootstrap to React | Complete React Course in Hindi #5
+
+`npm install` helps to recreate the `node_modules` folder.
+
+## [ChatGPT] Can we use class instead of className in the latest version of react?
+
+Yes, in the latest versions of React, you can use the `class` attribute instead of `className` to define CSS classes for elements within JSX code. This change was introduced in React 17.
+
+Prior to React 17, the attribute for defining CSS classes in JSX was `className`. This was done to avoid conflicts with the JavaScript `class` keyword. However, with the improvements in React 17 and the widespread support for ECMAScript 6 (ES6), using `class` for CSS classes is now allowed.
+
+Here's an example that demonstrates the usage of `class` for CSS classes in JSX:
+
+```jsx
+function MyComponent() {
+  return <div class="my-class">Hello, React!</div>;
+}
+```
+
+In this example, the `class` attribute is used to assign the CSS class `my-class` to the `<div>` element. This is the same syntax as you would use in regular HTML.
+
+However, it's important to note that when using React with JSX, the JavaScript `class` keyword is still reserved for defining component classes. So, when defining React components, you should continue to use `class` to define the class and `className` to define the CSS class attribute.
+
+```jsx
+class MyComponent extends React.Component {
+  render() {
+    return <div className="my-class">Hello, React!</div>;
+  }
+}
+```
+
+In this case, `className` is used to define the CSS class for the `<div>` element, while `class` is used to define the class for the `MyComponent` class.
+
+To summarize, while you can use the `class` attribute instead of `className` for defining CSS classes in JSX code, it is recommended to use `className` within React components to avoid any confusion between the JavaScript `class` keyword and CSS classes.
+
