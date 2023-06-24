@@ -10,18 +10,34 @@ export default function TextForm(props) {
     let newText = text.toUpperCase();
     setText(newText);
   }
+  const handleLoClick = () => {
+    console.log("UpperCase was Clicked!");
+    let newText = text.toLowerCase();
+    setText(newText);
+  }
   const handleOnChange = (event) => {
     console.log("TextArea was Changed!");
     setText(event.target.value);
   }
   return (
-    <div>
-        <h1>{props.heading}</h1>
-        <div className="mb-3">
-            <label htmlFor="myBox">Example textarea</label>
-            <textarea className="form-control" id="myBox" rows="3" value={text} onChange={handleOnChange} />
+    <>
+        <div className="container">
+            <h1>{props.heading}</h1>
+            <div className="mb-3">
+                <label htmlFor="myBox">Example textarea</label>
+                <textarea className="form-control" id="myBox" rows="3" value={text} onChange={handleOnChange} />
+            </div>
+            <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-    </div>
+        <div className="container my-3">
+            <h2>Your Text Summary</h2>
+            <p>{text.split(" ").length} words, {text.length} characters</p>
+            <p>{0.008 * text.split(" ").length} minutes to read.</p>
+            <h2>Preview</h2>
+            <p>{text}</p>
+        </div>
+    </>
+    
   )
 }
