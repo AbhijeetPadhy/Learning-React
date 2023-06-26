@@ -27,6 +27,9 @@
   - [\[ChatGPT\] Can we use class instead of className in the latest version of react?](#chatgpt-can-we-use-class-instead-of-classname-in-the-latest-version-of-react)
 - [Understanding Props and PropTypes in React | Complete React Course in Hindi #6](#understanding-props-and-proptypes-in-react--complete-react-course-in-hindi-6)
 - [Understanding State \& Handling Events in React | Complete React Course in Hindi #7](#understanding-state--handling-events-in-react--complete-react-course-in-hindi-7)
+- [Creating "Enable Dark Mode" Button Using useState Hook | Complete React Course in Hindi #10](#creating-enable-dark-mode-button-using-usestate-hook--complete-react-course-in-hindi-10)
+  - [what is $0 in js](#what-is-0-in-js)
+  - [difference between == and === in js](#difference-between--and--in-js)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -729,3 +732,50 @@ You should still use className and htmlFor in your JSX, it was showing me error 
 Hooks help to use class features without using class based components.
 
 You can't use value={text} without using onChange={handleOnChange}.
+
+# Creating "Enable Dark Mode" Button Using useState Hook | Complete React Course in Hindi #10
+
+## what is $0 in js
+
+In JavaScript, `$0` is a special variable available in some browser developer tools, such as the browser console or the Elements panel in the browser's Developer Tools.
+
+`$0` specifically refers to the currently selected element in the browser's DOM (Document Object Model) within the developer tools. It allows you to access and manipulate the selected element directly from the console or through JavaScript code in the context of the current webpage.
+
+For example, if you inspect an element in the browser's Developer Tools, you can access that element using the `$0` variable. You can then interact with it, modify its properties, or invoke methods on it through JavaScript code.
+
+Here's an example of using `$0` in the browser console:
+
+1. Open the browser's Developer Tools.
+2. Navigate to the Elements panel.
+3. Select an HTML element within the page.
+4. In the console, you can type `$0` to reference the selected element.
+
+Once you have the element referenced by `$0`, you can access its properties and methods. For instance, you can modify its CSS styles, inspect its attributes, or invoke DOM manipulation functions on it.
+
+It's important to note that `$0` is specific to browser developer tools and not a standard JavaScript feature. It provides a convenient way to interact with elements on the page during development and debugging, but it's not part of the JavaScript language itself.
+
+## difference between == and === in js
+
+In JavaScript, the `==` (equality operator) and `===` (strict equality operator) are used to compare values for equality. However, they differ in terms of how they perform the comparison and handle different data types.
+
+1. `==` (Equality Operator):
+   - The `==` operator performs type coercion, meaning it tries to convert the operands to a common type before comparing them.
+   - It allows for loose equality comparisons, where the operands are considered equal if they have the same value after coercion, even if their data types are different.
+   - Examples:
+     - `1 == 1` is `true`
+     - `"1" == 1` is `true` (The string is coerced to a number before comparison)
+     - `true == 1` is `true` (The boolean is coerced to a number before comparison)
+
+2. `===` (Strict Equality Operator):
+   - The `===` operator performs a strict equality comparison without type coercion.
+   - It requires both the value and the data type to be the same for the operands to be considered equal.
+   - Examples:
+     - `1 === 1` is `true`
+     - `"1" === 1` is `false` (The data types are different, string vs. number)
+     - `true === 1` is `false` (The data types are different, boolean vs. number)
+
+In general, it is recommended to use the `===` operator (strict equality) in JavaScript because it avoids unexpected behavior caused by type coercion. By using strict equality, you ensure that both the value and the data type of the operands are considered in the comparison.
+
+Using `==` (equality) can lead to subtle bugs and make the code harder to reason about due to the implicit type conversions. However, there may be specific cases where type coercion is desired, and in those situations, the `==` operator can be used intentionally.
+
+To summarize, `===` (strict equality) performs a comparison considering both value and data type, while `==` (equality) performs type coercion before comparison. It's generally recommended to use `===` to ensure more predictable and reliable equality checks in JavaScript.
