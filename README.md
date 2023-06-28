@@ -30,6 +30,7 @@
 - [Creating "Enable Dark Mode" Button Using useState Hook | Complete React Course in Hindi #10](#creating-enable-dark-mode-button-using-usestate-hook--complete-react-course-in-hindi-10)
   - [what is $0 in js](#what-is-0-in-js)
   - [difference between == and === in js](#difference-between--and--in-js)
+- [Improving Dark Mode \& Refactoring App Component | Complete React Course in Hindi #12](#improving-dark-mode--refactoring-app-component--complete-react-course-in-hindi-12)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -779,3 +780,7 @@ In general, it is recommended to use the `===` operator (strict equality) in Jav
 Using `==` (equality) can lead to subtle bugs and make the code harder to reason about due to the implicit type conversions. However, there may be specific cases where type coercion is desired, and in those situations, the `==` operator can be used intentionally.
 
 To summarize, `===` (strict equality) performs a comparison considering both value and data type, while `==` (equality) performs type coercion before comparison. It's generally recommended to use `===` to ensure more predictable and reliable equality checks in JavaScript.
+
+# Improving Dark Mode & Refactoring App Component | Complete React Course in Hindi #12
+
+Just like we can pass variables via props, we can pass functions too. In this tutorial we pass function via props.
