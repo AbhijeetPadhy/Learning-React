@@ -32,6 +32,10 @@
   - [difference between == and === in js](#difference-between--and--in-js)
 - [Improving Dark Mode \& Refactoring App Component | Complete React Course in Hindi #12](#improving-dark-mode--refactoring-app-component--complete-react-course-in-hindi-12)
 - [Adding + Auto Dismissing Alert Messages | Complete React Course in Hindi #13](#adding--auto-dismissing-alert-messages--complete-react-course-in-hindi-13)
+- [React Router Setup + Usage | Complete React Course in Hindi #16](#react-router-setup--usage--complete-react-course-in-hindi-16)
+  - [why react does not give router out of the box](#why-react-does-not-give-router-out-of-the-box)
+  - [What is the use of react js?](#what-is-the-use-of-react-js)
+- [\[Free\] Building + Hosting React App For free on Github Pages | Complete React Course in Hindi #17](#free-building--hosting-react-app-for-free-on-github-pages--complete-react-course-in-hindi-17)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -790,3 +794,51 @@ Just like we can pass variables via props, we can pass functions too. In this tu
 
 + explains how we can pass objects in props
 + how we can choose whether or not to show a div, ie whether or not to return anything
+
+# React Router Setup + Usage | Complete React Course in Hindi #16
+
++ Harry explains router using v5, but it was not working properly, and the recent version is 6. 
++ I refered codevolution and it explains v6. 
++ v5 and v6 are different, so dont get confused with the way of handling things.
+
+## why react does not give router out of the box
+
+React is primarily a library for building user interfaces and does not include a router out of the box because routing requirements can vary greatly between applications. React focuses on providing a flexible and composable component model for building UIs, allowing developers to choose from a variety of routing solutions based on their specific needs.
+
+React Router, a popular third-party library, offers a comprehensive routing solution for React applications. It provides a set of components and utilities that enable declarative routing and navigation within a single-page application. React Router offers features like nested routes, route matching, URL parameters, programmatic navigation, and more.
+
+By keeping routing separate from the core React library, developers have the freedom to choose the routing solution that best fits their project requirements. Different applications may have different routing needs, such as simple client-side routing, server-side rendering (SSR) support, code-splitting, or dynamic route configuration. Using a dedicated routing library like React Router allows for greater flexibility and extensibility to handle diverse routing scenarios.
+
+Moreover, React follows the philosophy of having a focused and single-responsibility approach to its core features. By separating routing into its own library, React remains lightweight and focused on its primary goal of building user interfaces, while allowing developers to opt-in to the routing functionality as needed.
+
+React Router has gained widespread adoption and provides a robust and widely-supported solution for routing in React applications. It integrates seamlessly with React and offers a rich set of features and APIs for handling navigation and managing application state.
+
+---
+
+The main purpose of react is to divide a site into components and load them separately and not routing. Look at the result of chat gpt:
+
+## What is the use of react js?
+
+React.js, or simply React, is a JavaScript library for building user interfaces. It is widely used for creating interactive and dynamic web applications. Here are some key uses and benefits of React:
+
+1. Component-Based Architecture: React follows a component-based architecture, where the UI is divided into reusable and self-contained components. Components encapsulate their own logic, state, and rendering, making it easier to develop, test, and maintain complex user interfaces.
+
+2. Virtual DOM: React uses a virtual DOM (Document Object Model) to efficiently update and render components. The virtual DOM is a lightweight representation of the actual DOM, and React leverages it to optimize rendering performance by minimizing costly manipulations of the real DOM.
+
+3. Declarative Syntax: React promotes a declarative approach to building UIs, allowing developers to describe how the UI should look based on its state. Instead of imperatively manipulating the DOM, developers define the desired UI state, and React takes care of updating the DOM accordingly. This approach leads to more readable and maintainable code.
+
+4. Reusable UI Components: React's component-based architecture enables the creation of reusable UI components. Components can be composed together to build complex interfaces, and they can be easily shared and reused across different parts of the application or even in multiple projects. This reusability helps to improve development efficiency and code maintainability.
+
+5. Efficient Updates: React efficiently updates the UI by performing a diffing algorithm to identify and update only the necessary parts of the UI that have changed. This minimizes the number of DOM manipulations and leads to better performance compared to traditional approaches.
+
+6. One-Way Data Flow: React follows a one-way data flow, also known as unidirectional data flow. Data flows from parent components to child components through props, making it easier to track and manage data changes and reducing the chances of unexpected side effects.
+
+7. Community and Ecosystem: React has a vibrant and active community with a rich ecosystem of libraries, tools, and resources. This ecosystem includes tools for state management (e.g., Redux, MobX), routing (e.g., React Router), form handling (e.g., Formik), testing (e.g., Jest, React Testing Library), and much more. The extensive community support and availability of resources make React a popular choice for web development.
+
+Overall, React provides a powerful and efficient way to build dynamic, high-performance, and reusable user interfaces. It simplifies UI development by promoting component reusability, declarative syntax, and efficient rendering. Its popularity and strong ecosystem make it a preferred choice for building modern web applications.
+
+# [Free] Building + Hosting React App For free on Github Pages | Complete React Course in Hindi #17
+
+https://create-react-app.dev/docs/deployment/
+npm run build
+https://www.npmjs.com/package/gh-pages
