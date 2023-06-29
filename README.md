@@ -31,6 +31,7 @@
   - [what is $0 in js](#what-is-0-in-js)
   - [difference between == and === in js](#difference-between--and--in-js)
 - [Improving Dark Mode \& Refactoring App Component | Complete React Course in Hindi #12](#improving-dark-mode--refactoring-app-component--complete-react-course-in-hindi-12)
+- [Adding + Auto Dismissing Alert Messages | Complete React Course in Hindi #13](#adding--auto-dismissing-alert-messages--complete-react-course-in-hindi-13)
 
 # Introduction to React Js + Installation | Complete React Course in Hindi #1 by CodeWithHarry 16 minutes
 ## Setup
@@ -784,3 +785,8 @@ To summarize, `===` (strict equality) performs a comparison considering both val
 # Improving Dark Mode & Refactoring App Component | Complete React Course in Hindi #12
 
 Just like we can pass variables via props, we can pass functions too. In this tutorial we pass function via props.
+
+# Adding + Auto Dismissing Alert Messages | Complete React Course in Hindi #13
+
++ explains how we can pass objects in props
++ how we can choose whether or not to show a div, ie whether or not to return anything

@@ -9,11 +9,13 @@ export default function TextForm(props) {
     console.log("UpperCase was Clicked!");
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to uppercase!", "success");
   };
   const handleLoClick = () => {
     console.log("UpperCase was Clicked!");
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to lowercase!", "success");
   };
   const handleOnChange = (event) => {
     console.log("TextArea was Changed!");
@@ -22,11 +24,13 @@ export default function TextForm(props) {
   const handleCopy = (event) => {
     console.log("Copying text to clipboard!");
     navigator.clipboard.writeText(text);
+    props.showAlert("Copied to clipboard!", "success");
   };
   const handleExtraSpaces = (event) => {
     console.log("Removing extra spaces!");
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extraspaces removed!", "success");
   };
 
   return (
